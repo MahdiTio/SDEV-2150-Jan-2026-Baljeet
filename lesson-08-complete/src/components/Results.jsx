@@ -1,6 +1,7 @@
 // src/components/Results.jsx
 import ResultsItem from './ResultsItem';
 import { resources } from '../data/resources';
+import { Laptop } from 'lucide-react';
 
 export default function Results() {
   return (
@@ -26,6 +27,11 @@ export default function Results() {
               {r.openNow && (
                 <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-800">
                   Open now
+                </span>
+              )}
+              {r.category == 'Tech' && (
+                <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[10px] font-semibold text-emerald-800">
+                  <Laptop size={14} className="text-blue-600" /> 
                 </span>
               )}
             </ResultsItem>
